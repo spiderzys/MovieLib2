@@ -1,7 +1,7 @@
 const Constants = {
   apikey:"api_key=3c9140cda64a622c6cb5feb6c2689164",
   Url:{
-      playingMovie:"http://api.themoviedb.org/3/movie/now_playing?"
+      playingMovie:"https://api.themoviedb.org/3/movie/now_playing?"
 
   }
 

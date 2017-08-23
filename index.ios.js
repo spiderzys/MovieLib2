@@ -8,7 +8,7 @@ import React from 'react';
 import { StyleSheet, Text, View, ScrollView, TabBarIOS,AppRegistry} from 'react-native';
 import NewMovieTab from './Components/NewMovieTab'
 import SearchTab from './Components/SearchTab'
-
+import MovieDataCenter from './MovieDataCenter'
 
 export default class MovieLib extends React.Component {
 
@@ -33,8 +33,11 @@ export default class MovieLib extends React.Component {
       </TabBarIOS.Item>
       <TabBarIOS.Item
         selected={this.state.selectedTab === "search"}
-        onPress={() => { this.setState({ selectedTab: "search" }) }}
+        onPress={() => { this.setState({ selectedTab: "search" }) 
+                          new MovieDataCenter().getPlayingMovies()
+        } }
         title='search'
+      
       >
        <Text>"2"</Text>
       </TabBarIOS.Item>
